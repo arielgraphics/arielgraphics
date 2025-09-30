@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ariel Graphics — Diseño & Redes</title>
+  <meta name="description" content="Ariel Graphics — Diseño gráfico, manejo de redes, diseño de camisetas deportivas y fotografía." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#07070a;
+      --panel:#0f1115;
+      --muted:#9aa3b2;
+      --accent:#7c4dff;
+      --accent-2:#00d4ff;
+      --glass: rgba(255,255,255,0.04);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;line-height:1.45;color:#e6eef8;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}
+    body{background:var(--bg);}
+    .container{max-width:1100px;margin:0 auto;padding:40px 20px}
+
+    header{
+      display:flex;align-items:center;justify-content:space-between;padding:18px 0;position:relative;z-index:2;
+    }
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{
+      width:80px;height:80px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent-2));
+      display:flex;align-items:center;justify-content:center;font-weight:800;color:#04040a;
+      box-shadow:0 6px 20px rgba(124,77,255,0.12), 0 2px 6px rgba(0,0,0,0.6);
+    }
+    .brand h1{font-size:22px;margin:0}
+    nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-weight:600}
+    nav a:hover{color:var(--accent)}
+
+    .hero{position:relative;overflow:hidden;height:90vh;display:flex;align-items:center;}
+    .hero video{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:0;}
+    .hero-left{position:relative;z-index:1;max-width:600px;padding:0 20px;}
+    .hero-left h2{font-size:3rem;margin:0 0 12px;}
+    .hero-left p{font-size:1.1rem;color:#ddd;margin:0 0 18px;}
+    .cta{display:inline-block;padding:12px 18px;border-radius:10px;background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#04040a;font-weight:700;text-decoration:none}
+
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);border-radius:12px;padding:18px;box-shadow:0 6px 20px rgba(2,6,23,0.6);}
+
+    .services{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:24px}
+    .service{display:flex;gap:12px;align-items:flex-start}
+    .service .icon{width:48px;height:48px;border-radius:10px;background:var(--glass);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--accent)}
+    .service h3{margin:0;font-size:16px}
+    .service p{margin:6px 0 0;color:var(--muted);font-size:14px}
+
+    .partners{margin-top:36px}
+    .partners h3{margin:0 0 12px}
+    .logo-strip{background:linear-gradient(90deg, rgba(255,255,255,0.02), transparent);padding:14px;border-radius:10px;overflow:hidden}
+    .logo-track{
+      display:flex;gap:28px;align-items:center;animation:scroll 22s linear infinite;
+    }
+    .partner{min-width:140px;display:flex;align-items:center;justify-content:center;padding:14px;border-radius:8px;background:rgba(255,255,255,0.02)}
+    .partner img{max-width:100%;max-height:46px;opacity:0.95;filter:grayscale(10%)}
+
+    @keyframes scroll{
+      0%{transform:translateX(0)}
+      100%{transform:translateX(-50%)}
+    }
+
+    .portfolio{margin-top:36px}
+    .portfolio h3{margin-bottom:12px}
+    .gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px}
+    .gallery img{width:100%;border-radius:10px;object-fit:cover;box-shadow:0 4px 14px rgba(0,0,0,0.5)}
+
+    @media (max-width:880px){
+      .hero{flex-direction:column;}
+      .logo-track{gap:18px}
+    }
+
+    footer{margin-top:44px;padding:30px 0;border-top:1px solid rgba(255,255,255,0.02);color:var(--muted)}
+    .contacts{display:flex;gap:18px;align-items:center}
+
+    .muted{color:var(--muted)}
+    .accent{color:var(--accent)}
+    .small{font-size:13px}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">
+           <img src="D:/Música/Página Web/Ariel Graphics/ag.png" alt="Logo Ariel Graphics" style="width:100%;height:100%;object-fit:contain;border-radius:10px;">
+        </div>
+        <div>
+          <h1>Ariel Graphics</h1>
+          <div class="small muted">Diseño • Redes • Camisetas • Fotografía</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#servicios">Servicios</a>
+        <a href="#clientes">Clientes</a>
+        <a href="#portafolio">Portafolio</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <video autoplay muted loop playsinline>
+        <source src="D:/Música/Página Web/Ariel Graphics/AC Graphics v2.mp4" type="video/mp4">
+        Tu navegador no soporta videos de fondo.
+      </video>
+      <div class="hero-left">
+        <h2>Diseño que conecta y vende</h2>
+        <p>En Ariel Graphics creamos identidad visual profesional, llevamos tus redes sociales al siguiente nivel, diseñamos camisetas deportivas personalizadas y capturamos momentos con fotografía profesional.</p>
+        <a class="cta" href="#contacto">Solicita presupuesto</a>
+      </div>
+    </section>
+
+    <!-- Servicios -->
+    <div class="services card" id="servicios">
+      <div class="service">
+        <div class="icon">🎨</div>
+        <div>
+          <h3>Diseño Gráfico</h3>
+          <p>Logotipos, identidad de marca, piezas publicitarias y material impreso.</p>
+        </div>
+      </div>
+      <div class="service">
+        <div class="icon">📱</div>
+        <div>
+          <h3>Manejo de Redes Sociales</h3>
+          <p>Estrategia, publicaciones, campañas y community management.</p>
+        </div>
+      </div>
+      <div class="service">
+        <div class="icon">👕</div>
+        <div>
+          <h3>Diseño de Camisetas</h3>
+          <p>Camisetas deportivas personalizadas, conjuntos y merchandising.</p>
+        </div>
+      </div>
+      <div class="service">
+        <div class="icon">📸</div>
+        <div>
+          <h3>Fotografía</h3>
+          <p>Sesiones comerciales, producto y fotografía para redes sociales.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Clientes -->
+    <section class="partners" id="clientes">
+      <h3>Empresas con las que hemos trabajado</h3>
+      <p class="muted small">Algunas de las marcas, equipos y emprendimientos que confiaron en Ariel Graphics.</p>
+      <div class="logo-strip card" aria-hidden="false">
+        <div class="logo-track" id="logoTrack">
+          <div class="partner"><img src="D:/Música/Página Web/Ariel Graphics/logo muebles san cristobal.png" alt="Logo Empresa 1"></div>
+          <div class="partner"><img src="D:/Música/Página Web/Ariel Graphics/logo nuevo.png" alt="Logo Empresa 2"></div>
+          <div class="partner"><img src="D:/Música/Página Web/Ariel Graphics/CCDR.png" alt="Logo Empresa 3"></div>
+          <div class="partner"><img src="D:/Música/Página Web/Ariel Graphics/fiestas la colonia2.png" alt="Logo Empresa 4"></div>
+          <div class="partner"><img src="D:/Música/Página Web/Ariel Graphics/LOG.png" alt="Logo Empresa 5"></div>
+          <div class="partner"><img src="D:/Música/Página Web/Ariel Graphics/Santos de Guapiles FC.png" alt="Logo Empresa 1"></div>
+          <div class="partner"><img src="D:/Música/Página Web/Ariel Graphics/logo sab.png" alt="Logo Empresa 2"></div>
+          <div class="partner"><img src="D:/Música/Página Web/Ariel Graphics/escudo ctpp.png" alt="Logo Empresa 3"></div>
+          <div class="partner"><img src="D:/Música/Página Web/Ariel Graphics/LogoCunlimonm.png" alt="Logo Empresa 4"></div>
+          <div class="partner"><img src="D:/Música/Página Web/Ariel Graphics/ad-cariari-pococ.png" alt="Logo Empresa 5"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portafolio -->
+    <section class="portfolio" id="portafolio">
+      <h3>Portafolio</h3>
+      <div class="portfolio-block">
+        <h4>Afiches Gráficos</h4>
+        <div class="gallery">
+          <img src="D:/Música/Página Web/Ariel Graphics/AFICHE 3.jpg" alt="Afiches Ariel Graphics 1">
+          <img src="D:/Música/Página Web/Ariel Graphics/MONTA TOROS.png" alt="Afiches Ariel Graphics 2">
+          <img src="D:/Música/Página Web/Ariel Graphics/PAPA LEON XIV.png" alt="Afiches Ariel Graphics 3">
+        </div>
+      </div>
+      <div class="portfolio-block" style="margin-top:28px">
+        <h4>Camisetas Deportivas</h4>
+        <div class="gallery">
+          <img src="D:/Música/Página Web/Ariel Graphics/col.jpg" alt="Camiseta Ariel Graphics 1">
+          <img src="D:/Música/Página Web/Ariel Graphics/ctp.jpg" alt="Camiseta Ariel Graphics 2">
+          <img src="D:/Música/Página Web/Ariel Graphics/ccd.jpg" alt="Camiseta Ariel Graphics 3">
+        </div>
+      </div>
+      <div class="portfolio-block" style="margin-top:28px">
+        <h4>Fotografía de Eventos</h4>
+        <div class="gallery">
+          <img src="D:/Música/Página Web/Ariel Graphics/pm.jpg" alt="Camiseta Ariel Graphics 1">
+          <img src="D:/Música/Página Web/Ariel Graphics/cola.jpg" alt="Camiseta Ariel Graphics 2">
+          <img src="D:/Música/Página Web/Ariel Graphics/ccf.jpg" alt="Camiseta Ariel Graphics 3">
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" style="margin-top:30px">
+      <div class="card">
+        <h3>Contacto</h3>
+        <p class="muted small">¿Listo para comenzar? Escríbenos y te enviamos presupuesto sin compromiso.</p>
+        <form onsubmit="event.preventDefault();submitForm();" style="margin-top:12px;display:grid;gap:10px">
+          <input id="name" type="text" placeholder="Tu nombre" required style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit">
+          <input id="email" type="email" placeholder="Correo" required style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit">
+          <textarea id="message" rows="4" placeholder="Cuéntanos sobre tu proyecto" style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit"></textarea>
+          <div style="display:flex;gap:8px;align-items:center">
+            <button type="submit" class="cta" style="padding:10px 16px">Enviar</button>
+            <div class="small muted">
+              O escríbenos por <a href="https://wa.me/50687365466" target="_blank" class="accent">WhatsApp</a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap">
+        <div>
+          <div style="font-weight:700">Ariel Graphics</div>
+          <div class="small muted">Guápiles, Costa Rica • ariel98cr@gmail.com</div>
+        </div>
+        <div class="contacts">
+          <div class="small muted">Síguenos</div>
+          <div style="display:flex;gap:8px">
+            <a href="https://www.instagram.com/tuusuario" target="_blank" class="small muted">Instagram</a>
+            <a href="https://www.facebook.com/tuusuario" target="_blank" class="small muted">Facebook</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    function submitForm() {
+      const name = document.getElementById('name').value || 'Amigo';
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+
+      const subject = encodeURIComponent(`Nuevo mensaje de ${name}`);
+      const body = encodeURIComponent(`Nombre: ${name}\nCorreo: ${email}\nMensaje: ${message}`);
+      window.location.href = `mailto:ariel98cr@gmail.com?subject=${subject}&body=${body}`;
+
+      document.getElementById('name').value = '';
+      document.getElementById('email').value = '';
+      document.getElementById('message').value = '';
+    }
+
+    const track = document.getElementById('logoTrack');
+    track.addEventListener('mouseenter', ()=> track.style.animationPlayState='paused');
+    track.addEventListener('mouseleave', ()=> track.style.animationPlayState='running');
+  </script>
+</body>
+</html>
